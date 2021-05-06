@@ -73,6 +73,7 @@ console.log(lima);
 
 
 
+
 function header() {
     let tr = document.createElement('tr');
     h.appendChild(tr);
@@ -88,6 +89,8 @@ function header() {
     tr.appendChild(cell3);
     cell3.textContent = 'Daily Location Total';
 }
+
+
 
 
 
