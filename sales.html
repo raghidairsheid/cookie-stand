@@ -19,31 +19,42 @@
 <main>
 
         
-    <!-- <form action="" id="formSales">
+    <form action="" id="formSales">
         <fieldset>
             <legend>Welcome to my form</legend>
-            <label for="locationName"> Location Name</label>
-            <input type="text" id="locationName" name="locationName" placeholder=""/>
+            <label for="choose"> Location Name</label>
+            <input type="text" id="locationName" name="locationName" required/>
+             <!-- list="l1" required pattern="[Se]attle|[To]kyo|[Du]bai|[Pa]ris|[Li]ma"  />
+            <datalist id="l1">
+                <option>Seattle</option>
+                <option>Tokyo</option>
+                <option>Dubai</option>
+                <option>Paris</option>
+                <option>Lima</option>
+              </datalist>
+            
+         -->
             <br><br>
-      
+          
             <label for="min"> Minimum number of customer</label>
-            <input type="text" id="min" name="min" />
+            <input type="number" id="min" name="min" />
             <br><br>
                     
             <label for="max"> Miximum number of customer</label>
-            <input type="text" id="max" name="max" />
+            <input type="number" id="max" name="max" />
             <br><br>
 
             <label for="AVG"> Avarege number of coockies Sale</label>
-            <input type="text" id="AVG" name="AVG"  />
+            <input type="number" id="AVG" name="AVG"  />
             <br><br>
       
             <input type="submit" value="Click me" />
         </fieldset>
-    </form> -->
+    </form>
+    <table id='sales'></table>
     </main>
     <br><br>
-    <div id='sales'></div>
+    <div id='editLocation'></div>
     
     <script src="js/app.js"></script>
     <!-- <div id="container"></div> -->
