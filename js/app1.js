@@ -19,7 +19,7 @@ let Seattle = {
         for (let hour = 0; hour < hours.length; hour++) {
             this.randomCustomerPerHour.push(Math.floor(Math.random() * (this.maxCustomerPerHour - this.minCustomerPerHour + 1) + this.minCustomerPerHour));
         }
-        //console.log(this);
+        console.log(this);
     },
 
     //calculate and store amounts of cookies for each hour
@@ -29,7 +29,7 @@ let Seattle = {
             this.salesPerHour.push(Math.ceil(this.randomCustomerPerHour[i] * this.avgCustomerCookies));
             this.totalPerHour += this.salesPerHour[i];
         }
-        //console.log(this);
+        console.log(this);
     },
 
     //separate array
