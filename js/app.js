@@ -3,8 +3,8 @@
 
 //hours
 let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12am", "1pm", "2pm", "3pm", "4pm","5pm" ,"6pm","7pm"];
-let randomCustomerPerHour= [];
-let salesPerHour= [];
+// let randomCustomerPerHour= [];
+// let salesPerHour= [];
 
 
 let obLocatin =[]; //array of obj
@@ -40,12 +40,17 @@ Location.prototype.salesCookies= function () {
      console.log(this);
 },
 
-Location.prototype.Tables = function () {
+Location.prototype.render = function () {
+    let parent = document.getElementById('sales');
+    let creat_table = document.createElement('table');
+    parent.appendChild(t);
+
+
     let tr = document.createElement('tr');
-    h.appendChild(tr);
+    creat_table.appendChild(tr);
     let th = document.createElement('th');
     tr.appendChild(th);
-    for(let i=0;i<obLocatin.length;i++){
+    for(let i=0; i<obLocatin.length; i++){
         totalPerHour+=this.counter;
         th.textContent = this.location;
         for (let i = 0; i < hours.length; i++) {
@@ -70,27 +75,44 @@ let paris = new Location('Paris', 38, 20, 2.3);
 console.log(paris);
 let lima = new Location('Lima',16, 2, 4.6);
 console.log(lima);
-
+//footer
 
 
 
 function header() {
-    let tr = document.createElement('tr');
-    h.appendChild(tr);
-    let cell1 = document.createElement('td');
-    tr.appendChild(cell1);
+    
+    let trEl = document.createElement('tr');
+    h.appendChild(trEl);
+    let cell1 = document.createElement('th');
+    trEl.appendChild(cell1);
     cell1.textContent = " ";
     for (let j = 0; j < hours.length; j++) {
-        let cell2 = document.createElement('td');
-        tr.appendChild(cell2);
+        let cell2 = document.createElement('th');
+        trEl.appendChild(cell2);
         cell2.textContent = hours[j];
     }
-    let cell3 = document.createElement('td');
-    tr.appendChild(cell3);
+    let cell3 = document.createElement('th');
+    trEl.appendChild(cell3);
     cell3.textContent = 'Daily Location Total';
 }
 
+let formSales = document.getElementById('formSales');
+//let divEl = document.getElementById('container');
+formSales.addEventListener('submit', clickme);
 
+
+function clickme(event){
+    event.preventDefault();
+
+    let locationName = event.target.locationName.value;
+    console.log(locationName);
+    let minCustomerPerHour = event.target.minCustomerPerHour.value;
+    console.log(minCustomerPerHour);
+    let maxCustomerPerHour = event.target.maxCustomerPerHour.value;
+    console.log(maxCustomerPerHour);
+    let avgCustomerCookies = event.target.avgCustomerCookies.value;
+    console.log(avgCustomerCookies);
+}
 
 
 
