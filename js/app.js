@@ -141,23 +141,33 @@ lima.render();
 //console.log(lima);
 footer();
 
-// let formSales = document.getElementById('formSales');
-// //let divEl = document.getElementById('container');
-// formSales.addEventListener('submit', clickme);
+let formSales = document.getElementById('formSales');
+//let divEl = document.getElementById('container');
+formSales.addEventListener('submit', clickme);
 
 
-// function clickme(event){
-//     event.preventDefault();
+function clickme(event){
+    event.preventDefault();
 
-//     let locationName = event.target.locationName.value;
-//     console.log(locationName);
-//     let minCustomerPerHour = event.target.minCustomerPerHour.value;
-//     console.log(minCustomerPerHour);
-//     let maxCustomerPerHour = event.target.maxCustomerPerHour.value;
-//     console.log(maxCustomerPerHour);
-//     let avgCustomerCookies = event.target.avgCustomerCookies.value;
-//     console.log(avgCustomerCookies);
-// }
+    let locName = event.target.locationName.value;
+    console.log(locName);
+    let minCus = parseInt(event.target.min.value);
+    console.log(minCus);
+    let maxCus = parseInt(event.target.max.value);
+    console.log(maxCus);
+    let avgCus = parseInt(event.target.AVG.value);
+    console.log(avgCus);
+    
+    let editLoc = new Location(locName, minCus, maxCus,avgCus);
+        editLoc.randomCustomerNumber();
+        editLoc.salesCookies();
+        editLoc.render();
+
+        let patSales2 = document.getElementById('editLocation');
+        patSales2.textContent = ' '; 
+        footer();
+    // creat_table();
+}
 
 
 
