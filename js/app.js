@@ -9,8 +9,8 @@ let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12am", "1pm", "2pm", "
 
 let obLocatin =[]; //array of obj
 let patSales = document.getElementById('sales');
-let creat_table = document.createElement('table');
-patSales.appendChild(creat_table);
+let creatTable = document.createElement('table');
+patSales.appendChild(creatTable);
 
 // constructur function
 function Location(locationName, minCustomerPerHour, maxCustomerPerHour, avgCustomerCookies){
@@ -46,7 +46,7 @@ Location.prototype.salesCookies = function () {
 Location.prototype.render = function () {
     
     let trEl1 = document.createElement('tr');
-    creat_table.appendChild(trEl1);
+    creatTable.appendChild(trEl1);
     let tdata = document.createElement('td');
     trEl1.appendChild(tdata);
     tdata.textContent = this.locationName;
@@ -73,7 +73,7 @@ Location.prototype.render = function () {
 
 function header() {
     let trEl2 = document.createElement('tr');
-    creat_table.appendChild(trEl2);
+    creatTable.appendChild(trEl2);
     let thead = document.createElement('th');
     trEl2.appendChild(thead);
     thead.textContent = " ";
@@ -89,7 +89,7 @@ function header() {
 
 function footer(){
     let trEl3 = document.createElement('tr');
-    creat_table.appendChild(trEl3);
+    creatTable.appendChild(trEl3);
     let thEl = document.createElement('th');
     trEl3.appendChild(thEl);
     thEl.textContent = 'Total';
@@ -155,18 +155,20 @@ function clickme(event){
     console.log(minCus);
     let maxCus = parseInt(event.target.max.value);
     console.log(maxCus);
-    let avgCus = parseInt(event.target.AVG.value);
+    let avgCus = parseFloat(event.target.AVG.value);
     console.log(avgCus);
     
+    creatTable.removeChild(creatTable.lastChild);
+
     let editLoc = new Location(locName, minCus, maxCus,avgCus);
         editLoc.randomCustomerNumber();
         editLoc.salesCookies();
         editLoc.render();
 
-        let patSales2 = document.getElementById('editLocation');
-        patSales2.textContent = ' '; 
+    // let patSales2 = document.getElementById('editLocation');
+    //     patSales2.textContent = ' '; 
         footer();
-    // creat_table();
+    // creatTable();
 }
 
 

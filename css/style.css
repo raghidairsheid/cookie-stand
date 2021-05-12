@@ -1,20 +1,18 @@
 table {
     background-color: rgb(174, 184, 184) ;  
-     border: solid black 1px;
-     border-collapse: collapse;
-     width: 100%;
-     /* overflow-x:auto; */
-   }
-   
-   th {
-       border: solid black 1px;
-       height: 40px;
-   }
-   
-   td {
-       border: solid black 1px;
-       text-align: center;
-   }
+    border: solid black 1px;
+    border-collapse: collapse;
+    width: 100%;
+    /* overflow-x:auto; */
+}
+th {
+    border: solid black 1px;
+    height: 40px;
+} 
+td {
+    border: solid black 1px;
+    text-align: center;
+}
 td:hover {
     background: #286428;
 }   
@@ -37,8 +35,7 @@ body {
 header {
     padding: 30px;
     text-align: center;
-    background-image: url("../img/OIP.jpg");
-   
+    background-image: url("../img/OIP.jpg"); 
 }
 a{
     text-align: left;
@@ -62,8 +59,7 @@ img {
 footer {
     clear: both;
     height: 50px;
-    background-color: #3f943ffb;
-    
+    background-color: #3f943ffb;   
 }
 h2 {
     font-weight: bold;
@@ -74,22 +70,19 @@ h2 {
 #l2 {
     border: 1px solid rgb(187, 98, 98);
     text-transform: uppercase;
-    text-shadow: 1px 1px red;
-    
+    text-shadow: 1px 1px red;   
 }
-
-
 input:invalid {
     border: 2px dashed red;
+    box-shadow: 0 0 5px 1px red;
 }
 input:invalid:required {
     background-image: linear-gradient(to right, pink, lightgreen);
-  }
-input:valid {
-    border: 2px solid black;
+}
+input{
+    /* border: 2px dashed red; */
     box-shadow: 0 0 5px 1px red;
-  }
-
+}
 #p1{
     font-family: serif;
     font-size: 20px;
