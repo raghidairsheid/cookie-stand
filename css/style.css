@@ -89,6 +89,36 @@ input{
     font-family: serif;
     font-size: 20px;
 }
+#p2{
+    background-color:rgb(205, 131, 241) ;
+}
+#ul2{
+    background-color:rgba(210, 171, 231, 0.541) ;
+}
+#p3{
+    background-color: darkturquoise;
+}
+#ul3{
+    background-color: rgba(61, 175, 177, 0.377);
+}
+#p4{
+    background-color: rgb(24, 114, 39);
+}
+#ul4{
+    background-color: rgba(41, 124, 30, 0.473);
+}
+#p5{
+    background-color: rgb(180, 231, 39);
+}
+#ul5{
+    background-color: rgba(209, 236, 56, 0.575);
+}
+#p6{
+    background-color: lightsalmon;
+}
+#ul6{
+    background-color: rgba(255, 160, 122, 0.459);
+}
 p{
     background-color: burlywood;
 }
